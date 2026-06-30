@@ -1,7 +1,6 @@
 import { i18n } from '@lingui/core';
 import { addDays, format, formatDistanceToNow, subDays } from 'date-fns';
 import { fr } from 'date-fns/locale';
-import { SOURCE_LOCALE } from 'twenty-shared/translations';
 import { messages as ptBrMessages } from '~/locales/generated/pt-BR';
 
 import {
@@ -15,8 +14,8 @@ import {
 } from '~/utils/date-utils';
 import { logError } from '~/utils/logError';
 
-i18n.load(SOURCE_LOCALE, ptBrMessages);
-i18n.activate(SOURCE_LOCALE);
+i18n.load('pt-BR', ptBrMessages);
+i18n.activate('pt-BR');
 
 jest.mock('~/utils/logError');
 jest.useFakeTimers().setSystemTime(new Date('2024-01-01T00:00:00.000Z'));
