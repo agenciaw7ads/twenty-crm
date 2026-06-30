@@ -3,7 +3,7 @@ import { I18nProvider } from '@lingui/react';
 import { type Preview } from '@storybook/react-vite';
 import { http, HttpResponse } from 'msw';
 import { initialize, mswLoader } from 'msw-storybook-addon';
-import { SOURCE_LOCALE } from 'twenty-shared/translations';
+
 
 // oxlint-disable-next-line no-restricted-imports
 import { DateFormat } from '../src/modules/localization/constants/DateFormat';
@@ -24,11 +24,11 @@ import 'twenty-ui/theme-light.css';
 import 'twenty-ui/theme-dark.css';
 import { ThemeProvider } from 'twenty-ui/theme-constants';
 // oxlint-disable-next-line no-restricted-imports
-import { messages as enMessages } from '../src/locales/generated/en';
+import { messages as ptBrMessages } from '../src/locales/generated/pt-BR';
 
 // Initialize i18n globally for all stories
-i18n.load({ [SOURCE_LOCALE]: enMessages });
-i18n.activate(SOURCE_LOCALE);
+i18n.load({ 'pt-BR': ptBrMessages });
+i18n.activate('pt-BR');
 import { mockedUserJWT } from '~/testing/mock-data/jwt';
 // oxlint-disable-next-line no-restricted-imports
 import { ClickOutsideListenerContext } from '../src/modules/ui/utilities/pointer-event/contexts/ClickOutsideListenerContext';

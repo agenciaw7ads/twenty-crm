@@ -10,12 +10,11 @@ import {
 } from 'node:stream/web';
 
 import { i18n } from '@lingui/core';
-import { SOURCE_LOCALE } from 'twenty-shared/translations';
-import { messages as enMessages } from '~/locales/generated/en';
+import { messages as ptBrMessages } from '~/locales/generated/pt-BR';
 
 // Initialize i18n for all tests
-i18n.load({ [SOURCE_LOCALE]: enMessages });
-i18n.activate(SOURCE_LOCALE);
+i18n.load({ 'pt-BR': ptBrMessages });
+i18n.activate('pt-BR');
 
 const globalWithWebStreams = globalThis as Record<string, unknown>;
 
