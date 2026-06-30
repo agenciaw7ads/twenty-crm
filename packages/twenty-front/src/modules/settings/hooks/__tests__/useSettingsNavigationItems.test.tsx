@@ -21,13 +21,12 @@ import {
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { Provider as JotaiProvider } from 'jotai';
-import { SOURCE_LOCALE } from 'twenty-shared/translations';
-import { messages } from '~/locales/generated/en';
+import { messages } from '~/locales/generated/pt-BR';
 
 i18n.load({
-  [SOURCE_LOCALE]: messages,
+  'pt-BR': messages,
 });
-i18n.activate(SOURCE_LOCALE);
+i18n.activate('pt-BR');
 
 const mockCurrentUser = {
   id: 'fake-user-id',

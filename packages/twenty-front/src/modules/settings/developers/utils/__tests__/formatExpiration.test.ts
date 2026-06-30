@@ -3,10 +3,10 @@ import {
   isExpired,
 } from '@/settings/developers/utils/formatExpiration';
 import { i18n } from '@lingui/core';
-import { messages as enMessages } from '~/locales/generated/en';
+import { messages as ptBrMessages } from '~/locales/generated/pt-BR';
 
-i18n.load('en', enMessages);
-i18n.activate('en');
+i18n.load('pt-BR', ptBrMessages);
+i18n.activate('pt-BR');
 
 jest.useFakeTimers().setSystemTime(new Date('2024-01-01T00:00:00.000Z'));
 
